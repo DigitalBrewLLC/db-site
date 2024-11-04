@@ -1,7 +1,9 @@
 {
-  "name": "db-site",
+  "name": "digital-brew",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
+  "website": "https://digitalbrew.tech",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

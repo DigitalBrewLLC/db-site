@@ -9,11 +9,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // Base brand colors for reference
+        "brand-white": "#EAEBED",
+        "brand-blue": "#007FFF",
+        "brand-sapphire": "#031A30",
+
+        // Theme colors using CSS variables
+        background: {
+          DEFAULT: "var(--background)",
+        },
+        text: {
+          DEFAULT: "var(--text)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+        },
+      },
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        "open-sans": ["var(--font-open-sans)", "sans-serif"],
+        "source-code": ["var(--font-source-code-pro)", "monospace"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

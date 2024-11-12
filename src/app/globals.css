@@ -16,8 +16,11 @@
   }
 
   /* Typography defaults */
-  body {
+  body,
+  footer,
+  nav {
     font-family: var(--font-opensans);
+    color: var(--text);
   }
 
   h1,

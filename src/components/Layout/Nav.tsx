@@ -4,14 +4,7 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ThemeToggle } from "../Theme/ThemeToggle";
 import Divider from "./Divider";
-
-const navigation = [
-  { name: "About", href: "#" },
-  { name: "Projects", href: "#" },
-  { name: "Blog", href: "#" },
-  { name: "Contact", href: "#" },
-  { name: "Donate 🍵", href: "#" },
-];
+import { DigitalBrewLinks } from "@/common/types";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,13 +26,13 @@ const Nav = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {DigitalBrewLinks.map((item) => (
             <a
-              key={item.name}
+              key={item.label}
               href={item.href}
               className="text-sm/6 font-semibold text-text"
             >
-              {item.name}
+              {item.label}
             </a>
           ))}
         </div>
@@ -98,15 +91,15 @@ const Nav = () => {
 
               <div className="mt-6 flow-root">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {DigitalBrewLinks.map((item) => (
                     <a
-                      key={item.name}
+                      key={item.label}
                       href={item.href}
-                      aria-label={item.name}
+                      aria-label={item.label}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold hover:text-accent"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {item.name}
+                      {item.label}
                     </a>
                   ))}
                 </div>

@@ -8,21 +8,21 @@ import {
 
 const cards = [
   {
-    name: "Sales",
+    name: "Web Design and Development",
     description:
-      "Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.",
+      "Professional web design and development services to strengthen your brand identity and increase website traffic.",
     icon: PhoneIcon,
   },
   {
-    name: "Technical Support",
+    name: "SEO Consulting",
     description:
-      "Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.",
+      "Our SEO consulting services enhance your digital presence, focusing on technical and content SEO to drive more traffic to your website.",
     icon: LifebuoyIcon,
   },
   {
-    name: "Media Inquiries",
+    name: "Web Accessibility Consulting and Auditing",
     description:
-      "Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.",
+      "Expert web accessibility consulting and auditing services to make your website inclusive for all users, including those with disabilities, while ensuring compliance with accessibility standards.",
     icon: NewspaperIcon,
   },
 ];
@@ -36,9 +36,9 @@ const HomeCTA = () => {
             Digital Brew
           </h2>
           <p className="mt-8 text-pretty text-lg font-medium sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-            fugiat.
+            Offering expert SEO consulting, web accessibility, and digital
+            solutions to empower businesses with customized, results-driven
+            strategies for success in the digital age.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-8">

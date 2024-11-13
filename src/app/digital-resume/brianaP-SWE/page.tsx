@@ -1,5 +1,5 @@
-import GithubIcon from "@/app/icons/GithubIcon";
-import LinkedInIcon from "@/app/icons/LinkedInIcon";
+import GithubIcon from "@/icons/GithubIcon";
+import LinkedInIcon from "@/icons/LinkedInIcon";
 
 export default function BrianaPeppersResume() {
   return (

@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ThemeToggle } from "../Theme/ThemeToggle";
 import Divider from "./Divider";
 import { DigitalBrewLinks } from "@/common/types";
+import TeaCupIcon from "@/icons/TeaCupIcon";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,13 +15,8 @@ const Nav = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Digital Brew LLC</span>
-            <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
+          <a href="/" className="-m-1.5 p-1.5">
+            <span className="text-accent">Digital Brew</span>
           </a>
         </div>
 
@@ -55,6 +51,7 @@ const Nav = () => {
             )}
           </button>
         </div>
+        {/* {!isMenuOpen && <Divider />} */}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
@@ -70,11 +67,7 @@ const Nav = () => {
               <div className="flex items-center gap-x-6">
                 <a href="#" className="-m-1.5 p-1.5">
                   <span className="sr-only">Digital Brew LLC</span>
-                  <img
-                    alt="Digital Brew LLCLogo"
-                    src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                    className="h-8 w-auto"
-                  />
+                  <TeaCupIcon />
                 </a>
                 <button
                   type="button"

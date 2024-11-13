@@ -13,5 +13,5 @@ export const DigitalBrewLinks: AppLink[] = [
   { label: "About", href: "/digital-brew-about" },
   { label: "Blog", href: "/digital-brew-blog" },
   { label: "Contact", href: "/digital-brew-contact" },
-  { label: "Projects", href: "/digital-brew-projects" },
+  { label: "Projects", href: "/digital-brew-solutions" },
 ];

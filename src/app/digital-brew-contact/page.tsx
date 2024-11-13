@@ -1,7 +1,7 @@
 import ComingSoon from "@/components/Layout/ComingSoon";
 
-const DigitalBrewSolutions = () => {
+const DigitalBrewContact = () => {
   return <ComingSoon />;
 };
 
-export default DigitalBrewSolutions;
+export default DigitalBrewContact;

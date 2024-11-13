@@ -1,5 +1,6 @@
 "use client";
 
+import TeaCupIcon from "@/icons/TeaCupIcon";
 import {
   LifebuoyIcon,
   NewspaperIcon,
@@ -31,9 +32,9 @@ const HomeCTA = () => {
   return (
     <main className="relative isolate overflow-hidden bg-background py-24 my-2 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-5xl font-semibold tracking-tight sm:text-7xl">
-            Digital Brew
+        <div className="mx-auto max-w-2xl lg:mx-0 ">
+          <h2 className="text-5xl font-semibold tracking-tight sm:text-7xl flex items-center gap-x-8">
+            Digital Brew <TeaCupIcon size={175} />
           </h2>
           <p className="mt-8 text-pretty text-lg font-medium sm:text-xl/8">
             Offering expert SEO consulting, web accessibility, and digital

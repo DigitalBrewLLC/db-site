@@ -1,6 +1,4 @@
-import Footer from "@/components/Layout/Footer";
 import HomeCTA from "@/components/Layout/HomeCTA";
-import Nav from "@/components/Layout/Nav";
 
 const Home = () => {
   return (

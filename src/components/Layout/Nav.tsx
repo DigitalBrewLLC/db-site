@@ -6,6 +6,7 @@ import { ThemeToggle } from "../Theme/ThemeToggle";
 import Divider from "./Divider";
 import { DigitalBrewLinks } from "@/common/types";
 import TeaCupIcon from "@/icons/TeaCupIcon";
+import Link from "next/link";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,21 +16,21 @@ const Nav = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="text-accent">Digital Brew</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-12">
           {DigitalBrewLinks.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="text-sm/6 font-semibold text-text"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -65,10 +66,10 @@ const Nav = () => {
             {/* Menu Panel */}
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-accent/10">
               <div className="flex items-center gap-x-6">
-                <a href="#" className="-m-1.5 p-1.5">
+                <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Digital Brew LLC</span>
                   <TeaCupIcon />
-                </a>
+                </Link>
                 <button
                   type="button"
                   onClick={() => setIsMenuOpen(false)}
@@ -85,7 +86,7 @@ const Nav = () => {
               <div className="mt-6 flow-root">
                 <div className="space-y-2 py-6">
                   {DigitalBrewLinks.map((item) => (
-                    <a
+                    <Link
                       key={item.label}
                       href={item.href}
                       aria-label={item.label}
@@ -93,7 +94,7 @@ const Nav = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -204,11 +204,11 @@ export default function BrianaPeppersResume() {
                   Integrating Accessibility into Frontend Development
                 </h3>
                 <span className="text-xs sm:text-sm text-text-secondary">
-                  OCT 2023
+                  OCT 2024
                 </span>
               </div>
               <p className="text-text-secondary text-sm sm:text-base">
-                Published on Medium
+                Published on LinkedIn
               </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
                 <a
@@ -218,8 +218,9 @@ export default function BrianaPeppersResume() {
                   rel="noopener noreferrer"
                   aria-label="Read article: A comprehensive guide on leveraging Next.js features for building performant web applications"
                 >
-                  A comprehensive guide on leveraging Next.js features for
-                  building performant web applications
+                  The CARE (Coding for Accessible and Responsive Experiences)
+                  principle should be integral to a holistic development
+                  approach.
                   <svg
                     aria-hidden="true"
                     className="w-3 h-3 sm:w-4 sm:h-4"
@@ -235,22 +236,35 @@ export default function BrianaPeppersResume() {
             <div className="border-l-4 border-accent pl-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                 <h3 className="text-lg sm:text-xl font-semibold">
-                  Best Practices for TypeScript in Large-Scale Applications
+                  Integrating the Mailchimp API with a Vite + React App
                 </h3>
                 <span className="text-xs sm:text-sm text-text-secondary">
-                  MAR 2023
+                  NOV 2024
                 </span>
               </div>
-              <p className="text-text-secondary text-sm sm:text-base">
-                Published on HashNode
-              </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
-                Exploring TypeScript patterns and practices for maintaining
-                complex codebases.
+                <a
+                  href="https://medium.com/@peppersbre/integrating-the-mailchimp-api-with-a-vite-react-app-8ca3cda88d6c"
+                  className="flex items-center gap-2 hover:underline hover:text-accent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Read article: A guide to integrating the Mailchimp API with a Vite + React app"
+                >
+                  A guide to integrating the Mailchimp API with a Vite + React
+                  app.
+                  <svg
+                    aria-hidden="true"
+                    className="w-3 h-3 sm:w-4 sm:h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
               </p>
             </div>
 
-            <div className="border-l-4 border-accent pl-4">
+            {/* <div className="border-l-4 border-accent pl-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                 <h3 className="text-lg sm:text-xl font-semibold">
                   Building POCs with Cursor
@@ -267,6 +281,7 @@ export default function BrianaPeppersResume() {
                 development with Cursor.
               </p>
             </div>
+          </div> */}
           </div>
         </section>
 

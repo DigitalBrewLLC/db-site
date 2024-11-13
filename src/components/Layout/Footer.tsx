@@ -1,5 +1,6 @@
 import { DigitalBrewLinks } from "@/common/types";
 import Divider from "./Divider";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,9 +14,13 @@ const Footer = () => {
           className="mb-10 flex flex-wrap justify-center gap-x-12 gap-y-3 text-md/6"
         >
           {DigitalBrewLinks.map((item) => (
-            <a key={item.label} href={item.href} className="hover:text-accent">
+            <Link
+              key={item.label}
+              href={item.href}
+              className="hover:text-accent"
+            >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
         <p

@@ -194,7 +194,7 @@ export default function BrianaPeppersResume() {
 
         {/* Articles Section */}
         <section className="w-full">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b-2 pb-2">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b-2 border-accent pb-2">
             Technical Articles & Publications
           </h2>
           <div className="space-y-4 sm:space-y-6">
@@ -287,7 +287,7 @@ export default function BrianaPeppersResume() {
 
         {/* Education Section */}
         <section className="w-full">
-          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b-2 pb-2">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 border-b-2 border-accent pb-2">
             Education & Certifications
           </h2>
           <div className="space-y-4 sm:space-y-6">

@@ -68,7 +68,7 @@ const Nav = () => {
               <div className="flex items-center gap-x-6">
                 <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">Digital Brew LLC</span>
-                  <TeaCupIcon />
+                  <TeaCupIcon size={72} />
                 </Link>
                 <button
                   type="button"

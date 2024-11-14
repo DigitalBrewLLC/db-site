@@ -2,9 +2,9 @@
 
 import TeaCupIcon from "@/icons/TeaCupIcon";
 import {
-  LifebuoyIcon,
-  NewspaperIcon,
-  PhoneIcon,
+  EyeIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
 } from "@heroicons/react/20/solid";
 
 const cards = [
@@ -12,19 +12,19 @@ const cards = [
     name: "Web Design and Development",
     description:
       "Professional web design and development services to strengthen your brand identity and increase website traffic.",
-    icon: PhoneIcon,
+    icon: GlobeAltIcon,
   },
   {
     name: "SEO Consulting",
     description:
       "Our SEO consulting services enhance your digital presence, focusing on technical and content SEO to drive more traffic to your website.",
-    icon: LifebuoyIcon,
+    icon: EyeIcon,
   },
   {
     name: "Web Accessibility Consulting and Auditing",
     description:
       "Expert web accessibility consulting and auditing services to make your website inclusive for all users, including those with disabilities, while ensuring compliance with accessibility standards.",
-    icon: NewspaperIcon,
+    icon: UserGroupIcon,
   },
 ];
 

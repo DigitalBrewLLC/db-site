@@ -201,7 +201,23 @@ export default function BrianaPeppersResume() {
             <div className="border-l-4 border-accent pl-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                 <h3 className="text-lg sm:text-xl font-semibold">
-                  Integrating Accessibility into Frontend Development
+                  <a
+                    href="https://www.linkedin.com/pulse/integrating-accessibility-frontend-development-briana-peppers-0rxje/?trackingId=Ct3r6AtYSnWdKqIU79y0Dg%3D%3D"
+                    className="flex items-center gap-2 hover:underline hover:text-accent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read article: Integrating Accessibility into Frontend Development"
+                  >
+                    Integrating Accessibility into Frontend Development
+                    <svg
+                      aria-hidden="true"
+                      className="w-3 h-3 sm:w-4 sm:h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </h3>
                 <span className="text-xs sm:text-sm text-text-secondary">
                   OCT 2024
@@ -211,77 +227,80 @@ export default function BrianaPeppersResume() {
                 Published on LinkedIn
               </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
-                <a
-                  href="https://www.linkedin.com/pulse/integrating-accessibility-frontend-development-briana-peppers-0rxje/?trackingId=Ct3r6AtYSnWdKqIU79y0Dg%3D%3D"
-                  className="flex items-center gap-2 hover:underline hover:text-accent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Read article: A comprehensive guide on leveraging Next.js features for building performant web applications"
-                >
-                  The CARE (Coding for Accessible and Responsive Experiences)
-                  principle should be integral to a holistic development
-                  approach.
-                  <svg
-                    aria-hidden="true"
-                    className="w-3 h-3 sm:w-4 sm:h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                The CARE (Coding for Accessible and Responsive Experiences)
+                principle should be integral to a holistic development approach.
               </p>
             </div>
 
             <div className="border-l-4 border-accent pl-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                 <h3 className="text-lg sm:text-xl font-semibold">
-                  Integrating the Mailchimp API with a Vite + React App
+                  <a
+                    href="https://medium.com/@peppersbre/integrating-the-mailchimp-api-with-a-vite-react-app-8ca3cda88d6c"
+                    className="flex items-center gap-2 hover:underline hover:text-accent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read article: Integrating the Mailchimp API with a Vite + React App"
+                  >
+                    Integrating the Mailchimp API with a Vite + React App
+                    <svg
+                      aria-hidden="true"
+                      className="w-3 h-3 sm:w-4 sm:h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </h3>
                 <span className="text-xs sm:text-sm text-text-secondary">
                   NOV 2024
                 </span>
               </div>
+              <p className="text-text-secondary text-sm sm:text-base">
+                Published on Medium
+              </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
-                <a
-                  href="https://medium.com/@peppersbre/integrating-the-mailchimp-api-with-a-vite-react-app-8ca3cda88d6c"
-                  className="flex items-center gap-2 hover:underline hover:text-accent"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Read article: A guide to integrating the Mailchimp API with a Vite + React app"
-                >
-                  A guide to integrating the Mailchimp API with a Vite + React
-                  app.
-                  <svg
-                    aria-hidden="true"
-                    className="w-3 h-3 sm:w-4 sm:h-4"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
+                A guide to integrating the Mailchimp API with a Vite + React
+                app.
               </p>
             </div>
 
-            {/* <div className="border-l-4 border-accent pl-4">
+            <div className="border-l-4 border-accent pl-4">
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-0">
                 <h3 className="text-lg sm:text-xl font-semibold">
-                  Building POCs with Cursor
+                  <a
+                    href="https://medium.com/@peppersbre/why-local-seo-is-crucial-for-small-businesses-414400e857c3"
+                    className="flex items-center gap-2 hover:underline hover:text-accent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Read article: Why Local SEO is Crucial for Small Businesses"
+                  >
+                    Why Local SEO is Crucial for Small Businesses
+                    <svg
+                      aria-hidden="true"
+                      className="w-3 h-3 sm:w-4 sm:h-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </h3>
                 <span className="text-xs sm:text-sm text-text-secondary">
-                  JAN 2023
+                  NOV 2024
                 </span>
               </div>
               <p className="text-text-secondary text-sm sm:text-base">
-                Published on Dev.to
+                Published on Medium
               </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
-                A guide to rapidly prototyping applications using AI-assisted
-                development with Cursor.
+                Use effective SEO strategies to increase your small business's
+                local visibility and attract more customers. This article covers
+                optimization techniques and common pitfalls to avoid, helping
+                you strengthen your presence in local search results.
               </p>
             </div>
-          </div> */}
           </div>
         </section>
 

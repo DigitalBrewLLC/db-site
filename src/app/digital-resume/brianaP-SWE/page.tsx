@@ -295,10 +295,11 @@ export default function BrianaPeppersResume() {
                 Published on Medium
               </p>
               <p className="text-text-secondary mt-2 text-sm sm:text-base">
-                Use effective SEO strategies to increase your small business's
-                local visibility and attract more customers. This article covers
-                optimization techniques and common pitfalls to avoid, helping
-                you strengthen your presence in local search results.
+                Use effective SEO strategies to increase your small
+                business&apos;s local visibility and attract more customers.
+                This article covers optimization techniques and common pitfalls
+                to avoid, helping you strengthen your presence in local search
+                results.
               </p>
             </div>
           </div>

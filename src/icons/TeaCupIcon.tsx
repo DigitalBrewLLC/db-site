@@ -1,5 +1,5 @@
 import Image from "next/image";
-import teaCupIcon from "../../public/TeaCup.png";
+import Logo from "../../public/Logo.png";
 
 interface TeaCupIconProps {
   size?: number;
@@ -7,12 +7,7 @@ interface TeaCupIconProps {
 
 const TeaCupIcon = ({ size = 8 }: TeaCupIconProps) => {
   return (
-    <Image
-      src={teaCupIcon}
-      alt="Digital Brew Logo"
-      width={size}
-      height={size}
-    />
+    <Image src={Logo} alt="Digital Brew Logo" width={size} height={size} />
   );
 };
 

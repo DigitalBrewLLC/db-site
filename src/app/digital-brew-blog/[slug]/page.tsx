@@ -3,9 +3,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { notFound } from "next/navigation";
 
 interface PageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }> & { slug: string };
 }
 
 const DynamicBlogPage = async ({ params }: PageProps) => {

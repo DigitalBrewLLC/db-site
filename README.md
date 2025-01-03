@@ -1,24 +1,36 @@
-### Digital Brew LLC - landing page for digital solutions
+# 🌐 Welcome to **Digital Brew LLC** 🍵
+<div align=center>
+  <img src="https://github.com/user-attachments/assets/ccb5a0ce-1719-47e3-b92e-5d0a8ff08ee8" alt="Digital Brew LLC logo" />
+</div>
 
-# Digital Resume/Portfolio + Official Website for Digital Brew
+## About Us
+At **Digital Brew**, we specialize in **building and maintaining modern web applications** that are efficient, scalable, and easy to maintain. Using **cutting-edge technologies**, we ensure that every project we work on is future-proof and optimized for success. 🌟
 
-A modern, responsive digital portfolio built with Next.js, TypeScript, and Tailwind CSS.
+## Our Services
+We the following services to help your business thrive in the digital space:
+- **Custom Web Development & Design** 🎨💻
+- **Technical Consulting** 🔧💡
+- **SEO & Accessibility Audits** 🕵️‍♂️🔍
 
-## 🚀 Technologies Used
+## Blog 📚
+Stay up to date with our latest insights and resources on:
+- **Coding Tutorials & Best Practices** 💻📖
+- **Digital Marketing** 📈📊
+- **Web Accessibility** ♿️🌍
 
-- **Framework:** Next.js
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** Vercel/Netlify (based on the tech stack mentioned)
+## Tech Stack ⚙️
+- **Next.js** 
+- **TypeScript** 
+- **Tailwind CSS** 
+- **MDX**
+- **Vercel** 
 
-## 🛠️ Features
+## Contact Us 📧
+We’d love to hear from you!
 
-- Responsive design (mobile-first approach)
-- Professional sections including:
-  - Professional Experience
-  - Technical Skills
-  - Technical Articles & Publications
-  - Education & Certifications
-- Social media integration (LinkedIn, GitHub)
-- Accessible design with proper ARIA labels
-- Modern UI with purple accent theming
+- 🌐 **Website:** [digitalbrew.tech](http://digitalbrew.tech)
+- 📧 **Email:** [hello@digitalbrew.tech](mailto:hello@digitalbrew.tech)
+
+---
+
+© 2025 **Digital Brew LLC** 🍵

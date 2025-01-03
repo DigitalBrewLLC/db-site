@@ -7,6 +7,8 @@ import Divider from "./Divider";
 import { DigitalBrewLinks } from "@/common/types";
 import TeaCupIcon from "@/icons/TeaCupIcon";
 import Link from "next/link";
+import Image from "next/image";
+import MobileLogo from "../../../public/favicon.ico";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,9 +18,7 @@ const Nav = () => {
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8">
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5">
-            <span className="text-accent">Digital Brew</span>
-          </Link>
+          <TeaCupIcon size={36} />
         </div>
 
         {/* Desktop Navigation */}
@@ -48,11 +48,10 @@ const Nav = () => {
             {isMenuOpen ? (
               <XMarkIcon className="h-6 w-6 text-accent" aria-hidden="true" />
             ) : (
-              <Bars3Icon className="h-6 w-6 text-accent" aria-hidden="true" />
+              <Bars3Icon className="h-10 w-10 text-accent" aria-hidden="true" />
             )}
           </button>
         </div>
-        {/* {!isMenuOpen && <Divider />} */}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
@@ -66,10 +65,8 @@ const Nav = () => {
             {/* Menu Panel */}
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-accent/10">
               <div className="flex items-center gap-x-6">
-                <Link href="/" className="-m-1.5 p-1.5">
-                  <span className="sr-only">Digital Brew LLC</span>
-                  <TeaCupIcon size={72} />
-                </Link>
+                <span className="sr-only">Digital Brew LLC</span>
+                <TeaCupIcon size={72} />
                 <button
                   type="button"
                   onClick={() => setIsMenuOpen(false)}

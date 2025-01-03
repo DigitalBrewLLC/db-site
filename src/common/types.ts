@@ -15,3 +15,12 @@ export const DigitalBrewLinks: AppLink[] = [
   { label: "Contact", href: "/digital-brew-contact" },
   { label: "Projects", href: "/digital-brew-solutions" },
 ];
+
+export interface BlogPost {
+  title: string;
+  description: string;
+  date: string;
+  categories: BlogCategory[];
+  slug: string;
+  content: string;
+}

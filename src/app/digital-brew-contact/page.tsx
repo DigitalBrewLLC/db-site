@@ -1,7 +1,7 @@
-import ComingSoon from "@/components/Layout/ComingSoon";
+import Contact from "@/components/Forms/Contact";
 
 const DigitalBrewContact = () => {
-  return <ComingSoon />;
+  return <Contact />;
 };
 
 export default DigitalBrewContact;

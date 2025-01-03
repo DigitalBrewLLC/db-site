@@ -1,6 +1,6 @@
 ### Digital Brew LLC - landing page for digital solutions
 
-# Digital Resume/Portfolio
+# Digital Resume/Portfolio + Official Website for Digital Brew
 
 A modern, responsive digital portfolio built with Next.js, TypeScript, and Tailwind CSS.
 

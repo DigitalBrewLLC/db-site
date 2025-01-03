@@ -1,0 +1,207 @@
+---
+title: "Integrating Mailchimp API in a Vite React Application"
+description: "Learn how to integrate the Mailchimp API in a Vite React application to send emails to your subscribers."
+date: "2024-11-15"
+categories: ["Code Tutorial", "Digital Marketing"]
+---
+
+## Introduction
+
+This blog post guides you through integrating the Mailchimp API into a Vite React application, a task crucial for automating your email marketing strategies.
+Whether a simple email input or a comprehensive sign-up form, this guide is a baseline to tie into any event action, like a user clicking a form button.
+
+```javascript
+const EmailForm = () => {
+  const handleSubmit = (e) => {
+    // ...
+    subscribeUser(e.target.value); // mailchimp api call
+  };
+  // ...
+  return (
+    <EmailForm>
+      {/* ... */}
+      <button onclick={handleSubmit}>Subscribe</button>
+    </EmailForm>
+  );
+};
+```
+
+## Prerequisites
+
+- Basic understanding of React, Node.js, and Vite
+- Mailchimp account
+
+Here’s a suggested folder layout for your application, separating the frontend (Vite React app) and backend (Node.js server):
+
+```
+/frontend
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/        # React components
+│   │   ├── App.jsx
+│   │   └── EmailForm.jsx
+│   └── ...
+├── package.json
+├── vite.config.js
+└── ...
+/backend
+├── node_modules/
+├── .env                   # Env variables for backend
+├── package.json
+├── server.js              # Main server file
+└── ...
+```
+
+### Step 1: Getting API Key and List ID from Mailchimp
+
+**NOTE:** You can find this information in your Mailchimp account under **Account Settings -> Extras -> API keys**
+
+- **MAILCHIMP_API_KEY**: Grants your application the necessary permissions to interact with your Mailchimp account
+- **MAILCHIMP_LIST_ID**: Unique identifier for a specific audience (or list) in your Mailchimp account and determines where your data goes (which audience it affects)
+- **MAILCHIMP_SERVER_PREFIX**: Refers to the subdomain part of the API endpoint URL. This subdomain is specific to your Mailchimp account and determines the data center where your account is hosted.
+
+This is usually the suffix of your API Key or prefix of your API endpoint  
+**Example**: `us20`
+
+### Step 2: Setting Up the Backend
+
+Create a separate Node.js project in the `/backend` directory
+
+```bash
+mkdir backend
+cd backend
+npm init -y
+touch server.js
+```
+
+Install required packages:
+
+```bash
+npm install express @mailchimp/mailchimp_marketing dotenv cors
+```
+
+### Step 3: Backend Code for Mailchimp Integration
+
+Create an endpoint in your backend to handle the form submission. This endpoint will receive the user’s email from your front end and make an API call to Mailchimp.
+
+```javascript
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+const client = require("@mailchimp/mailchimp_marketing");
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+client.setConfig({
+  apiKey: process.env.MAILCHIMP_API_KEY,
+  server: process.env.MAILCHIMP_SERVER_PREFIX,
+});
+
+app.post("/subscribe", async (req, res) => {
+  const { email } = req.body;
+  if (!email) {
+    return res.status(400).send("Email is required");
+  }
+  try {
+    const response = await client.lists.addListMember(
+      process.env.MAILCHIMP_LIST_ID,
+      {
+        email_address: email,
+        status: "pending", // or "subscribed" based on your preference
+      }
+    );
+    res.status(200).json(response);
+  } catch (error) {
+    console.error("Error with Mailchimp API:", error);
+    res
+      .status(500)
+      .json({ message: "Internal Server Error", details: error.message });
+  }
+});
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+```
+
+### Step 4: Frontend Integration
+
+**NOTE:** This guide is agnostic of your front-end implementation. The aim is solely to tie the form submission to a user action. Below is a straightforward method that can be attached to a component as an onClick event.
+
+```javascript
+const subscribeUser = async (email) => {
+  try {
+    const response = await fetch("http://localhost:3001/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ email }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    // Handle response
+  } catch (error) {
+    console.error("Subscription error:", error);
+  }
+};
+```
+
+Install `concurrently` to run both servers at the same time:
+
+```bash
+npm install concurrently --save-dev
+```
+
+Adjust your `package.json` based on your project setup:
+
+```json
+"scripts": {
+  "start": "vite", // will run FE
+  "dev": "concurrently \"npm run start\" \"cd backend && node server.js\"" // will run FE and BE
+}
+```
+
+### Step 5: Environment Variables Setup
+
+API keys should always be safeguarded against unauthorized access and never embedded directly in your codebase. A `.env` file is used to store environment variables securely, in this case, your Mailchimp API key, Server Prefix, and List ID.
+
+**Example .env file configuration** (Place this file in the root of your `/backend` directory):
+
+```plaintext
+MAILCHIMP_API_KEY=your_mailchimp_api_key_here
+MAILCHIMP_SERVER_PREFIX=your_mailchimp_server_prefix_here
+MAILCHIMP_LIST_ID=your_mailchimp_list_id_here
+PORT=3001
+```
+
+**Note:** Always add `.env` to `.gitignore` to keep it out of version control.
+
+### Step 6: Testing and Debugging
+
+Based on our setup in step 4, run `npm run dev` in `/frontend` to start your servers.
+
+Debugging common errors and things to double-check:
+
+- Verify that your List ID and data center prefix are correct.
+- Review the Mailchimp API documentation to ensure you use the correct endpoint and URL format.
+- Check the API key and ensure it’s correctly set up in your `.env` file.
+- Ensure proper network connectivity to reach Mailchimp’s API servers.
+- Verify if any firewall or security settings on your server might be blocking outbound HTTP requests.
+
+## Common Errors and Solutions
+
+- **Module Not Found Error**: Refer back to Step 2 and ensure all backend resources are correctly installed
+- **404 Error: Resource Not Found**: Check the latest documentation to diagnose endpoint issues, ensure consistency of ports between frontend and backend
+- **401 Error: API Key Invalid**: Ensure that the API key is valid and stored correctly in `backend/.env`
+
+## Conclusion
+
+Our focus here is on the backend setup and front-end integration, irrespective of how your subscription form is implemented. Feel free to tweak as needed.
+
+Happy coding and marketing!
+
+### Additional Resources
+
+- [Mailchimp API Documentation](https://mailchimp.com/developer/marketing/api/list-members/add-member-to-list/)

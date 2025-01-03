@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { BlogPost } from "@/common/types";
-import { serialize } from "next-mdx-remote/serialize";
 export const POSTS_DIRECTORY = path.join(process.cwd(), "blog-content");
 
 /**
@@ -36,7 +35,13 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     slug,
     title: data.title,
     description: data.description,
-    date: data.date,
+    date: new Date(
+      new Date(data.date).getTime() + 24 * 60 * 60 * 1000
+    ).toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    }),
     categories: data.categories || [],
     content,
   };

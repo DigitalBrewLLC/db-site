@@ -16,7 +16,7 @@ const BlogCard = ({
   categories,
 }: BlogCardProps) => {
   return (
-    <article className="flex max-w-xl flex-col items-start justify-between">
+    <article className="flex max-w-xl flex-col items-start">
       <div className="flex items-center gap-x-4 text-xs">
         <time dateTime={date} className="text-accent">
           {date}

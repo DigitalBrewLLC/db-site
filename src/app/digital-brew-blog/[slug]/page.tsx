@@ -17,34 +17,20 @@ const DynamicBlogPage = async ({ params }: PageProps) => {
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-24">
-      <header className="mb-12">
-        <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
-        <p className="text-lg text-text-secondary mb-2">{post.description}</p>
-        <time className="text-sm text-text-secondary">
-          {new Date(post.date).toLocaleDateString()}
-        </time>
-      </header>
+    <div className="bg-background">
+      <article className="mx-auto max-w-3xl px-6 py-24">
+        <header className="mb-12">
+          <h1 className="text-4xl font-bold mb-4">{post.title}</h1>
+          <p className="text-lg text-text-secondary mb-2">{post.description}</p>
+          <time className="text-sm text-text-secondary">{post.date}</time>
+        </header>
 
-      <div className="prose prose-lg dark:prose-invert">
-        <MDXRemote source={post.content} />
-      </div>
-    </article>
+        <div className="prose dark:prose-invert max-w-none">
+          <MDXRemote source={post.content} />
+        </div>
+      </article>
+    </div>
   );
 };
 
 export default DynamicBlogPage;
-
-/*
- * server side component for dynamic routes
- *
- * The dynamic blog post page uses fs (Node.js file system module) via a
- * utility function like getPostBySlug
- * to fetch content for individual blog posts from MDX or Markdown files.
- *
- * fs can only run in a Node.js environment, which is available server-side,
- * not in the browser.
- *
- * post is fetched on the server side (at build time), so it can be used in
- * the MDXRemote component
- */

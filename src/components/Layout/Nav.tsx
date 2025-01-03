@@ -7,8 +7,6 @@ import Divider from "./Divider";
 import { DigitalBrewLinks } from "@/common/types";
 import TeaCupIcon from "@/icons/TeaCupIcon";
 import Link from "next/link";
-import Image from "next/image";
-import MobileLogo from "../../../public/favicon.ico";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

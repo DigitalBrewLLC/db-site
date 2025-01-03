@@ -43,7 +43,9 @@ export function useContactForm() {
     } catch (error) {
       setSubmitStatus({
         type: "error",
-        message: "Failed to send message. Please try again later.",
+        message:
+          "Failed to send message. Please try again later. " +
+          (error instanceof Error ? error.message : "Unknown error"),
       });
     } finally {
       setIsSubmitting(false);

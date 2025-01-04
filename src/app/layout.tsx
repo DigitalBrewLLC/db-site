@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   title: "Digital Brew",
   description: "Digital Brew",
   icons: {
-    icon: "/TeaCup.png",
+    icon: "/Logo.png",
   },
 };
 

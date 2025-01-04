@@ -11,7 +11,7 @@ const cards = [
   {
     name: "Web Design and Development",
     description:
-      "Professional web design and development services to strengthen your brand identity and increase website traffic.",
+      "Providing professional web design and development services to strengthen your brand identity, enhance engagement, and drive website traffic for lasting growth.",
     icon: GlobeAltIcon,
   },
   {
@@ -23,23 +23,23 @@ const cards = [
   {
     name: "Web Accessibility Consulting and Auditing",
     description:
-      "Expert web accessibility consulting and auditing services to make your website inclusive for all users, including those with disabilities, while ensuring compliance with accessibility standards.",
+      "Web accessibility consulting and auditing services to ensure your website is inclusive, compliant, and accessible to all.",
     icon: UserGroupIcon,
   },
 ];
 
 const HomeCTA = () => {
   return (
-    <main className="relative isolate overflow-hidden bg-background py-24 my-2 sm:py-32">
+    <main className="relative isolate overflow-hidden bg-background py-16 my-2 sm:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0 ">
-          <div className="flex flex-col">
+        <div className="mx-auto max-w-2xl lg:mx-0 flex flex-col items-center lg:items-start">
+          <div className="flex flex-col items-center lg:items-start">
             <TeaCupIcon size={175} />
-            <h2 className="text-5xl font-semibold tracking-tight sm:text-7xl flex items-center mt-6">
+            <h2 className="text-5xl font-semibold tracking-tight sm:text-7xl flex items-center mt-6 text-center lg:text-left">
               Digital Brew
             </h2>
           </div>
-          <p className="mt-8 text-pretty text-lg font-medium sm:text-xl/8">
+          <p className="mt-8 text-pretty text-lg font-medium sm:text-xl/8 text-center lg:text-left">
             Offering expert SEO consulting, web accessibility, and digital
             solutions to empower businesses with customized, results-driven
             strategies for success in the digital age.

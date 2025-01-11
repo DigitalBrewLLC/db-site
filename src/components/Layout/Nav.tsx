@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ThemeToggle } from "../Theme/ThemeToggle";
 import Divider from "./Divider";
-import { DigitalBrewLinks } from "@/common/types";
+import { DigitalBrewLinks } from "@/info-maps/site-navigation";
 import TeaCupIcon from "@/icons/TeaCupIcon";
 import Link from "next/link";
 

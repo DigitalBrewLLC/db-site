@@ -3,7 +3,6 @@ import { getAllPosts } from "@/lib/getAllPosts";
 
 const DigitalBrewBlog = async () => {
   const posts = await getAllPosts();
-  console.log(posts);
 
   return (
     <div className="bg-background py-24 sm:py-32">

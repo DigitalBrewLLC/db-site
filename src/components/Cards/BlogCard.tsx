@@ -1,4 +1,4 @@
-import { BlogCategory } from "@/common/types";
+import { BlogCategory } from "@/info-maps/blog-types";
 
 interface BlogCardProps {
   title: string;

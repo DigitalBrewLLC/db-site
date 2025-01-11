@@ -1,4 +1,4 @@
-import { DigitalBrewLinks } from "@/common/types";
+import { DigitalBrewLinks } from "@/info-maps/site-navigation";
 import Divider from "./Divider";
 import Link from "next/link";
 

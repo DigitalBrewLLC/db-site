@@ -1,7 +1,7 @@
 import nodemailer from "nodemailer";
 
 export const workTransporter = nodemailer.createTransport({
-  host: "smtp.privateemail.com",
+  host: process.env.EMAIL_HOST,
   port: 465,
   secure: true,
   auth: {
@@ -16,7 +16,6 @@ export const mailOptions = {
   toWork: process.env.EMAIL_WORK,
 };
 
-// interface for the contact form data
 interface ContactFormData {
   name: string;
   email: string;

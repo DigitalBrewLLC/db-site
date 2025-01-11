@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { BlogPost } from "@/common/types";
+import { BlogPost } from "@/info-maps/blog-types";
 export const POSTS_DIRECTORY = path.join(process.cwd(), "blog-content");
 
 /**
